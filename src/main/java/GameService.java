@@ -27,6 +27,9 @@ public class GameService {
      * @return true if guessNumber is equal to the secretNumber, false otherwise.
      */
     public boolean checkGuess(double guessNumber) {
-        return false;
+        // use ternary operator to compare whether 'GameService' class' instance field 'secretNumber' == arg's 'guessNumber' value
+        return((this.secretNumber == guessNumber) ? true : false);
+        // can NOT in String.equals() firstly on non-String data types & second on primitives
+        // return((this.secretNumber.equals(guessNumber)) ? true : false);
     }
 }
